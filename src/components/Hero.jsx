@@ -151,7 +151,7 @@ function Hero() {
 
   // Handle resume download
   const handleResumeDownload = () => {
-    const resumeUrl = "/karthikeyan_resume.pdf";
+    const resumeUrl = "/final resume.pdf";
     const link = document.createElement("a");
     link.href = resumeUrl;
     link.download = "Karthikeyan-Resume.pdf";
