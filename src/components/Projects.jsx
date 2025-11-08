@@ -5,7 +5,7 @@ function Projects() {
   const projectList = [
     {
       title: "PC Components E-Commerce Platform",
-      desc: "Full-stack e-commerce solution with modern payment integration and admin dashboard. An e-commerce web app built with Django for browsing, customizing, and purchasing PC components.",
+      desc: "Full-stack e-commerce solution with dummy modern payment integration and admin dashboard. An e-commerce web app built with Django for browsing, customizing, and purchasing PC components.",
       github: "https://github.com/Karthikeyankalatheeswaran/pcshop-django",
       live: "https://componentpc-k.onrender.com/",
       tags: [
@@ -14,8 +14,22 @@ function Projects() {
         "SQLite",
         "Render",
         "JavaScript",
-        "HTML",
-        "CSS",
+        "HTML & CSS",
+      ],
+    },
+    {
+      title: "Checkpoint - A Game Logging App",
+      desc: "A web application that allows users to log and track their gaming sessions, built with Django and React.",
+      github: "https://github.com/Karthikeyankalatheeswaran/project-checkpoint",
+      // live: "https://componentpc-k.onrender.com/",
+      tags: [
+        "Django",
+        "Python",
+        "React",
+        "PostgreSQL",
+        "JavaScript",
+        "HTML & CSS",
+        "APIs",
       ],
     },
   ];

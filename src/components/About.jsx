@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import FadeInWrapper from "./FadeInWrapper";
+import image from "../assets/profile.jpg";
+import image2 from "../assets/profile2.jpg";
 
 // Helper function to get provider icons
 const getProviderIcon = (issuer) => {
@@ -27,9 +29,11 @@ function About() {
   const skills = [
     "Django",
     "React",
+    "Langchain",
+    "OpenAI",
     "JavaScript",
-    "Node.js",
     "Python",
+    "Java",
     "MongoDB",
     "PostgreSQL",
     "HTML5",
@@ -49,6 +53,13 @@ function About() {
   ];
 
   const certifications = [
+    {
+      name: "Generative AI with Large Language Models",
+      issuer: "Coursera",
+      description:
+        "Understanding and building applications using LLMs and generative AI",
+      year: "2025",
+    },
     {
       name: "AWS Cloud Practitioner",
       issuer: "Amazon Web Services",
@@ -78,11 +89,11 @@ function About() {
       <div className="container">
         {/* Main About Content - Simplified */}
         <div className="row justify-content-center">
-          <div className="col-lg-10">
+          <div className="col-lg-12">
             <FadeInWrapper>
-              <div className="text-center mb-5">
+              <div className="mb-5">
                 <h2
-                  className="fw-bold mb-4"
+                  className="fw-bold mb-5 text-center"
                   style={{
                     fontFamily: "'Playfair Display', serif",
                     color: "var(--primary-dark)",
@@ -91,33 +102,65 @@ function About() {
                 >
                   About Me
                 </h2>
-                <div className="row justify-content-center">
-                  <div className="col-lg-8">
-                    <p
-                      className="text-muted mb-4"
-                      style={{
-                        fontSize: "1.1rem",
-                        lineHeight: "1.8",
-                      }}
-                    >
-                      Hello! I'm Karthikeyan, a computer science student who
-                      loves turning ideas into impactful digital solutions. My
-                      interests span web development, AI, and creating
-                      user-friendly applications that make technology simple and
-                      useful.
-                    </p>
-                    <p
-                      className="text-muted"
-                      style={{
-                        fontSize: "1.1rem",
-                        lineHeight: "1.8",
-                      }}
-                    >
-                      I believe in the power of technology to solve complex
-                      problems and create positive impact. Whether working on
-                      front-end interfaces or back-end systems, I strive for
-                      excellence in every project.
-                    </p>
+                <div className="row align-items-center justify-content-between">
+                  {/* Text on the left - larger column */}
+                  <div className="col-lg-7">
+                    <div className="pe-4">
+                      <p
+                        className="text-muted mb-4"
+                        style={{
+                          fontSize: "1.1rem",
+                          lineHeight: "1.8",
+                        }}
+                      >
+                        Hello! I'm Karthikeyan, a computer science student who
+                        loves turning ideas into impactful digital solutions. My
+                        interests span web development, AI, and creating
+                        user-friendly applications that make technology simple
+                        and useful.
+                      </p>
+                      <p
+                        className="text-muted mb-4"
+                        style={{
+                          fontSize: "1.1rem",
+                          lineHeight: "1.8",
+                        }}
+                      >
+                        I believe in the power of technology to solve complex
+                        problems and create positive impact. Whether working on
+                        front-end interfaces or back-end systems, I strive for
+                        excellence in every project.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Profile picture on the right - optimized */}
+                  <div className="col-lg-5">
+                    <div className="d-flex justify-content-center">
+                      <motion.div
+                        whileHover={{ scale: 1.02 }}
+                        transition={{ duration: 0.3 }}
+                        style={{
+                          padding: "15px",
+                          backgroundColor: "rgba(201, 169, 110, 0.1)",
+                          borderRadius: "16px",
+                          border: "2px solid rgba(201, 169, 110, 0.2)",
+                          boxShadow: "0 8px 25px rgba(0, 0, 0, 0.1)",
+                        }}
+                      >
+                        <img
+                          src={image2}
+                          alt="Profile"
+                          style={{
+                            width: "320px",
+                            height: "auto",
+                            borderRadius: "12px",
+                            objectFit: "cover",
+                            display: "block",
+                          }}
+                        />
+                      </motion.div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -171,7 +214,7 @@ function About() {
                   Areas of Interest
                 </h3>
                 <div className="row justify-content-center">
-                  <div className="col-lg-8">
+                  <div className="col-lg-10">
                     <div className="d-flex flex-wrap justify-content-center gap-3">
                       {interests.map((interest, index) => (
                         <motion.span
@@ -209,7 +252,7 @@ function About() {
                   Certifications
                 </h3>
                 <div className="row justify-content-center">
-                  <div className="col-lg-8">
+                  <div className="col-lg-10">
                     <div className="d-flex flex-column gap-3">
                       {certifications.map((cert, index) => (
                         <motion.div

@@ -8,7 +8,7 @@ function Hero() {
     "Full-Stack Developer",
     "Python Developer",
     "Tech Enthusiast",
-    "Gamer",
+    "Occasional Gamer",
     "Problem Solver",
   ];
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
