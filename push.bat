@@ -1,0 +1,13 @@
+@echo off
+set GIT_TERMINAL_PROMPT=0
+set GCM_INTERACTIVE=never
+echo Configuring git user...
+"C:\Program Files\Git\cmd\git.exe" -C "c:\Users\Welcome\Documents\Antigravity\Portfolio-main" config user.email "kskarthikeyan.p@gmail.com"
+"C:\Program Files\Git\cmd\git.exe" -C "c:\Users\Welcome\Documents\Antigravity\Portfolio-main" config user.name "Karthikeyankalatheeswaran"
+echo Staging all files...
+"C:\Program Files\Git\cmd\git.exe" -C "c:\Users\Welcome\Documents\Antigravity\Portfolio-main" add .
+echo Creating commit...
+"C:\Program Files\Git\cmd\git.exe" -C "c:\Users\Welcome\Documents\Antigravity\Portfolio-main" commit -m "Portfolio update: Updated Hero, About, Projects sections with all GitHub repos"
+echo Pushing to GitHub...
+"C:\Program Files\Git\cmd\git.exe" -C "c:\Users\Welcome\Documents\Antigravity\Portfolio-main" push origin HEAD:main --force
+echo Done!
